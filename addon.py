@@ -35,6 +35,7 @@ import xbmc
 import xbmcgui
 import xbmcaddon
 import xbmcplugin
+import xbmcvfs
 
 CommonRootView = 50
 FullWidthList = 51
@@ -353,7 +354,7 @@ if __name__ == '__main__':
     ADDON = xbmcaddon.Addon()
     ADDON_NAME = ADDON.getAddonInfo('name')
 
-    PROFILE = xbmc.translatePath(ADDON.getAddonInfo('profile'))
+    PROFILE = xbmcvfs.translatePath(ADDON.getAddonInfo('profile'))
     VID = os.path.join(PROFILE, "video.ts")
 
     PATH = sys.argv[0]
